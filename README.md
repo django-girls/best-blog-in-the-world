@@ -1,2 +1,55 @@
 # best-blog-in-the-world
+
 Django Girls blog
+
+## Installation
+
+- Create virtualenv. Either `virtualenv virtual && source virtual/bin/activate` or `mkvirtualenv blog && workon blog`
+- Install Django `pip install Django`
+- Freeze requirements `pip freeze > requirements.txt`
+- Note: Next time install project with `pip install -r requirements.txt`
+
+## Install Docker
+
+- For Windows: `https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe`
+- For Mac: `https://download.docker.com/mac/stable/Docker.dmg`
+- Run Docker service in background
+
+## Setup database
+
+- Create database service `docker-compose up`
+- After first boot database service will require restart
+- Restart database service with `Ctrl+C` and run again `docker-compose up`
+- Do not close database service terminal window
+- Change database config in `settings.py`
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'localhost',
+        'PORT': 5433,
+    }
+}
+```
+
+## Configure project for new database
+
+- Apply migrations `python manage.py migrate`
+- Create superuser `python manage.py createsuperuser`
+
+## Use DataGrip or PyCharm Professional Database view
+
+- Configure new postgres connection under `localhost:5433`
+- Use database `postgres` and login `postgres`
+- View tables `auth_user`, `django_migrations` and `blog_post`
+
+## Run
+
+- Run server `python manage.py runserver`
+
+## Start coding
+
+- Use `django-admin startapp $name` or `python manage.py startapp $name` where `$name` is your name
