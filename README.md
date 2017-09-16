@@ -52,4 +52,7 @@ DATABASES = {
 
 ## Start coding
 
+- Create your own branch `git checkout -b $name`
 - Use `django-admin startapp $name` or `python manage.py startapp $name` where `$name` is your name
+- Add changes with `git add . && git commit -m "Your message here."` 
+- Push it to GitHub `git push origin $name`
