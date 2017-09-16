@@ -103,3 +103,4 @@ ENV/
 # rest
 .idea
 db.sqlite3
+virtual
