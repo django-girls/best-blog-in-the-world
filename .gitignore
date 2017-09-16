@@ -102,3 +102,4 @@ ENV/
 
 # rest
 .idea
+db.sqlite3
