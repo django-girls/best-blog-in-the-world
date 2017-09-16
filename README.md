@@ -56,3 +56,20 @@ DATABASES = {
 - Use `django-admin startapp $name` or `python manage.py startapp $name` where `$name` is your name
 - Add changes with `git add . && git commit -m "Your message here."` 
 - Push it to GitHub `git push origin $name`
+
+## Tasks
+
+- Install `https://github.com/django-extensions/django-extensions`
+- Install `https://github.com/bpython/bpython`
+- Remember to freeze requirements `pip freeze > requirements.txt`
+- Use `python manage.py shell_plus`
+- Notice how models are automatically loaded and how autocomplete works
+- Use `shell_plus` in future in favour of `shell`
+- Add, commit and push changes to your branch on GitHub
+- Make your first Pull Request on GitHub (your branch to master)
+
+## Task ideas
+
+- Django Girls extension (skip optional steps): `https://djangogirls.gitbooks.io/django-girls-tutorial-extensions`
+- Do some agile stuff (daily, retro, brainstorming and planning)
+- Conquer the moon!
