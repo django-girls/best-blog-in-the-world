@@ -37,6 +37,7 @@ DATABASES = {
 
 ## Configure project for new database
 
+- Install PostgreSQL support library `pip install psycopg2` 
 - Apply migrations `python manage.py migrate`
 - Create superuser `python manage.py createsuperuser`
 
