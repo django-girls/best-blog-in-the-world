@@ -5,7 +5,15 @@
 
     {% for post in paula_posts %}
         <div>
-            <h1>{{ post.title}} </h1> <h6>{{ post.author }}</h6>
+            <h6>Author: {{ post.author }}</h6>
+            <h1>{{ post.title}} </h1>
+            {% with comments_all=post.comments.all %}
+            {% for comment in comments_all %}
+                <h2>Comments: {{ comment.title }}</h2>
+            {% endfor %}
+            {% endwith %}
+
+        </br>
         </div>
     {% endfor %}
 {% endblock content %}

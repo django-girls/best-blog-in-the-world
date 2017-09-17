@@ -5,7 +5,10 @@ from blog.models import Post
 
 
 class Comments(models.Model):
-    post = models.ForeignKey(Post)
+    post = models.ForeignKey(Post,
+                             on_delete=models.CASCADE,
+                             related_name="comments"
+                             )
     author = models.CharField(max_length=20)
     title = models.CharField(max_length=200)
     text = models.TextField()
