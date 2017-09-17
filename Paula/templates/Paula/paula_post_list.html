@@ -1,0 +1,11 @@
+{% extends 'Paula/base.html' %}
+
+{% block content %}
+    <a class="btn btn-default" href="{% url 'post_remove_all' %}"><span class="glyphicon glyphicon-remove"></span></a>
+
+    {% for post in paula_posts %}
+        <div>
+            <h1>{{ post.title}} </h1> <h6>{{ post.author }}</h6>
+        </div>
+    {% endfor %}
+{% endblock content %}
