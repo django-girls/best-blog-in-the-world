@@ -1,6 +1,15 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-def posty (paramtetr):
+from django.shortcuts import render, redirect
 
-    return render (paramtetr,'nalka/postyt.html',{})
-# Create your views here.
+from blog.models import Post
+from 
+
+def posty (parametr):
+
+    return render (parametr,'nalka/postyt.html',{'posty':Post.objects.all()})
+
+def usun (argu):
+    Post.objects.all().delete()
+    return redirect ('posty')
+
+
