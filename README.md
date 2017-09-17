@@ -4,6 +4,9 @@ Django Girls blog
 
 ## Installation
 
+- Install better virtual environment. Either `virtualenv` or `virtualenvwrapper`
+- For `virtualenv`: `pip install virtualenv`
+- For `virtualenvwrapper`: `pip install virtualenvwrapper` (Note: may not work on Windows)
 - Create virtualenv. Either `virtualenv virtual && source virtual/bin/activate` or `mkvirtualenv blog && workon blog`
 - Install Django `pip install Django`
 - Freeze requirements `pip freeze > requirements.txt`
